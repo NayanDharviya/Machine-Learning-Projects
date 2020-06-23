@@ -1,0 +1,267 @@
+<html> 
+  <head>
+    
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+ <!-- Latest compiled and minified JavaScript -->
+  </head>
+<body> 
+    <h3>Income Prediction Form</h3> 
+  
+<div> 
+    <label for="app">App Name</label> 
+    <input type="text" id="app" name="app">
+  <form action="/result" method="POST"> 
+     
+    <br> 
+    
+    <div class="form-group">
+      <label for="Category">Category</label>
+      <select id="Category" class="form-control" name="Category">
+        <option selected>Choose...</option>
+        <option value="0">ART_AND_DESIGN</option> 
+          <option value="1">AUTO_AND_VEHICLES</option> 
+          <option value="2">BEAUTY</option> 
+          <option value="3">BOOKS_AND_REFERENCE</option> 
+          <option value="4">BUSINESS</option> 
+          <option value="5">COMICS</option> 
+          <option value="6">COMMUNICATION</option> 
+          <option value="7">DATING</option> 
+          <option value="8">EDUCATION</option> 
+          <option value="9">ENTERTAINMENT</option> 
+          <option value="10">EVENTS</option> 
+          <option value="11">FAMILY</option> 
+          <option value="12">FINANCE</option> 
+          <option value="13">FOOD_AND_DRINK</option> 
+          <option value="14">GAME</option> 
+          <option value="15">HEALTH_AND_FITNESS</option> 
+          <option value="16">HOUSE_AND_HOME</option> 
+          <option value="17">LIBRARIES_AND_DEMO</option> 
+          <option value="18">LIFESTYLE</option> 
+          <option value="19">MAPS_AND_NAVIGATION</option> 
+          <option value="20">MEDICAL</option> 
+          <option value="21">NEWS_AND_MAGAZINES</option> 
+          <option value="22">PARENTING</option> 
+          <option value="23">PERSONALIZATION</option> 
+          <option value="24">PHOTOGRAPHY</option> 
+          <option value="25">PRODUCTIVITY</option> 
+          <option value="26">SHOPPING</option> 
+          <option value="27">SOCIAL</option> 
+          <option value="28">SPORTS</option> 
+          <option value="29">TOOLS</option> 
+          <option value="30">TRAVEL_AND_LOCAL</option> 
+          <option value="11">VIDEO_PLAYERS</option> 
+          <option value="32">WEATHER</option> 
+        <option>...</option>
+      </select>
+    </div>
+    <br> 
+
+    <div class="form-group ">
+      <label for="Review">Number of Review</label>
+      <input type="number" class="form-control" id="Review" name="Review" placeholder="Enter Number of Review">
+    </div>
+    <!-- <label for="review">Number of Review </label> 
+    <input type="text" id="review" name="review"> -->
+    <br> 
+
+
+    <label for="size">Size in MB </label> 
+    <input type="text" id="size" name="size"> 
+    <br> 
+
+
+    <label for="install">Installs</label> 
+    <select id="install" name="install"> 
+      <option value="0">0+</option> 
+      <option value="1">1+</option> 
+      <option value="2">1,000+</option> 
+      <option value="3">1,000,000+</option> 
+      <option value="4">1,000,000,000+</option> 
+      <option value="5">10+</option> 
+      <option value="6">10,000+</option> 
+      <option value="7">10,000,000+</option> 
+      <option value="8">100+</option> 
+      <option value="9">100,000+</option> 
+      <option value="10">100,000,000+</option> 
+      <option value="11">5+</option> 
+      <option value="12">5,000+</option> 
+      <option value="13">5,000,000+</option> 
+      <option value="14">50+</option> 
+      <option value="15">50,000+</option> 
+      <option value="16">50,000,000+</option> 
+      <option value="17">500+</option> 
+      <option value="18">500,000+</option> 
+      <option value="19">500,000,000+</option> 
+    </select> 
+    <br> 
+
+
+    <label for=type>Type</label> 
+    <select id="type" name="type"> 
+      <option value="0">Free</option> 
+      <option value="1">Paid</option> 
+    </select> 
+    <br>
+
+
+    
+    <label for="price">Price in $ </label> 
+    <input type="text" id="price" name="price">
+    <br> 
+    
+
+    <label for="crating">Content Rating</label> 
+    <select id="crating" name="crating"> 
+      <option value="0">Adults only 18+</option> 
+      <option value="1">Everyone</option> 
+      <option value="2">Everyone 10+</option> 
+      <option value="3">Mature 17+</option> 
+      <option value="4">Teen</option> 
+      <option value="5">Unrated</option> 
+    </select> 
+    <br> 
+    <label for="genres">Genres</label> 
+    <select id="genres" name="genres"> 
+      <option value="0">Action</option> 
+      <option value="1">Action;Action & Adventure</option> 
+      <option value="2">Adventure</option> 
+      <option value="3">Adventure;Action & Adventure</option> 
+      <option value="4">Adventure;Brain Games</option> 
+      <option value="5">Adventure;Education</option> 
+      <option value="6">Arcade</option> 
+      <option value="7">Arcade;Action & Adventure</option> 
+      <option value="8">Arcade;Pretend Play</option> 
+      <option value="9">Art & Design</option> 
+      <option value="10">Art & Design;Action & Adventure</option> 
+      <option value="11">Art & Design;Creativity</option> 
+      <option value="12">Art & Design;Pretend Play</option> 
+      <option value="13">Auto & Vehicles</option> 
+      <option value="14">Beauty</option> 
+      <option value="15">Board</option> 
+      <option value="16">Board;Action & Adventure</option> 
+      <option value="17">Board;Brain Games</option> 
+      <option value="18">Board;Pretend Play</option> 
+      <option value="19">Books & Reference</option> 
+      <option value="20">Books & Reference;Creativity</option> 
+      <option value="21">Books & Reference;Education</option> 
+      <option value="22">Business</option> 
+      <option value="23">Card</option> 
+      <option value="24">Card;Action & Adventure</option> 
+      <option value="25">Card;Brain Games</option> 
+      <option value="26">Casino</option> 
+      <option value="27">Casual</option> 
+      <option value="28">Casual;Action & Adventure</option> 
+      <option value="29">Casual;Brain Games</option> 
+      <option value="30">Casual;Creativity</option> 
+      <option value="31">Casual;Education</option> 
+      <option value="32">Casual;Music & Video</option> 
+      <option value="33">Casual;Pretend Play</option> 
+      <option value="34">Comics</option> 
+      <option value="35">Comics;Creativity</option> 
+      <option value="36">Comics;Creativity</option> 
+      <option value="37">Communication;Creativity</option> 
+      <option value="38">Dating</option> 
+      <option value="39">Education</option> 
+      <option value="40">Education;Action & Adventure</option> 
+      <option value="41">Education;Brain Games</option> 
+      <option value="42">Education;Creativity</option> 
+      <option value="43">Education;Education</option> 
+      <option value="44">Education;Music & Video</option> 
+      <option value="45">Education;Pretend Play</option> 
+      <option value="46">Educational</option> 
+      <option value="47">Educational;Action & Adventure</option> 
+      <option value="48">Educational;Brain Games</option> 
+      <option value="49">Educational;Creativity</option> 
+      <option value="50">Educational;Education</option> 
+      <option value="51">Educational;Pretend Play</option> 
+      <option value="52">Entertainment</option> 
+      <option value="53">Entertainment;Action & Adventure</option> 
+      <option value="54">Entertainment;Brain Games</option> 
+      <option value="55">Entertainment;Creativity</option> 
+      <option value="56">Entertainment;Education</option> 
+      <option value="57">Entertainment;Music & Video</option> 
+      <option value="58">Entertainment;Pretend Play</option> 
+      <option value="59">Events</option> 
+      <option value="60">Finance</option> 
+      <option value="61">Food & Drink</option> 
+      <option value="62">Health & Fitness</option> 
+      <option value="63">Health & Fitness;Action & Adventure</option> 
+      <option value="64">Health & Fitness;Education</option> 
+      <option value="65">House & Home</option> 
+      <option value="66">Libraries & Demo</option> 
+      <option value="67">Lifestyle</option> 
+      <option value="68">Lifestyle;Education</option> 
+      <option value="69">Lifestyle;Pretend Play</option> 
+      <option value="70">Maps & Navigation</option> 
+      <option value="71">Medical</option> 
+      <option value="72">Music</option> 
+      <option value="73">Music & Audio;Music & Video</option> 
+      <option value="74">Music;Music & Video</option> 
+      <option value="75">News & Magazines</option> 
+      <option value="76">Parenting</option> 
+      <option value="77">Parenting;Brain Games</option> 
+      <option value="78">Parenting;Education</option> 
+      <option value="79">Parenting;Music & Video</option> 
+      <option value="80">Personalization</option> 
+      <option value="81">Photography</option> 
+      <option value="82">Productivity</option> 
+      <option value="83">Puzzle</option> 
+      <option value="84">Puzzle;Action & Adventure</option> 
+      <option value="85">Puzzle;Brain Games</option> 
+      <option value="86">Puzzle;Creativity</option> 
+      <option value="87">Puzzle;Education</option> 
+      <option value="88">Racing</option> 
+      <option value="89">Racing;Action & Adventure</option> 
+      <option value="90">Racing;Pretend Play</option> 
+      <option value="91">Role Playing</option> 
+      <option value="92">Role Playing;Action & Adventure</option> 
+      <option value="93">Role Playing;Brain Games</option> 
+      <option value="94">Role Playing;Education</option> 
+      <option value="95">Role Playing;Pretend Play</option> 
+      <option value="96">Shopping</option> 
+      <option value="97">Simulation</option> 
+      <option value="98">Simulation;Action & Adventure</option> 
+      <option value="99">Simulation;Education</option> 
+      <option value="100">Simulation;Pretend Play</option> 
+      <option value="101">Social</option> 
+      <option value="102">Sports</option> 
+      <option value="103">Sports;Action & Adventure</option> 
+      <option value="104">Strategy</option> 
+      <option value="105">Strategy;Action & Adventure</option> 
+      <option value="106">Strategy;Creativity</option> 
+      <option value="107">Strategy;Education</option> 
+      <option value="108">Tools</option> 
+      <option value="109">Tools;Education</option> 
+      <option value="110">Travel & Local</option> 
+      <option value="111">Travel & Local;Action & Adventure</option> 
+      <option value="112">Trivia</option> 
+      <option value="113">Trivia;Education</option> 
+      <option value="114">Video Players & Editors</option> 
+      <option value="115">Video Players & Editors;Creativity</option> 
+      <option value="116">Video Players & Editors;Music & Video</option> 
+      <option value="117">Weather</option> 
+      <option value="118">Word</option> 
+      
+      
+    </select> 
+    <br> 
+    
+
+ 
+    
+
+    <br> 
+   
+    
+
+    <br> 
+    <input type="submit" value="Submit"> 
+  </form> 
+</div> 
+</body> 
+</html> 
